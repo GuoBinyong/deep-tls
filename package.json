@@ -1,0 +1,74 @@
+{
+  "name": "deep-tls",
+  "version": "1.0.0",
+  "description": "deep-tls 提供了一些对数据进行深度操作的工具，如：深度相等测试、深拷贝等；其中，深拷贝可对任意数据进行深度拷贝，包括 函数 function、正则 RegExp、Map、Set、Date、Array、URL 等等；支持扩展，可根据数据类型定制拷贝逻辑，也可指定拷贝深度；所以，通过它可实现对任意类型的数据进行任意想要的拷贝",
+  "main": "dist/deep-tls.cjs.js",
+  "module": "dist/deep-tls.es.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "homepage": "https://github.com/GuoBinyong/deep-tls#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuoBinyong/deep-tls"
+  },
+  "keywords": [
+    "copy",
+    "clone",
+    "duplicate",
+    "deep",
+    "depth",
+    "recursive",
+    "deep copy",
+    "depth copy",
+    "recursive copy",
+    "deep clone",
+    "deep clone",
+    "recursive clone",
+    "function copy",
+    "RegExp copy",
+    "deep Equal",
+    "is Deep Equal",
+    "Equal test",
+    "深拷贝",
+    "深度拷贝",
+    "深复制",
+    "深度复制",
+    "深克隆",
+    "深度克隆",
+    "函数拷贝",
+    "深度相等",
+    "相等",
+    "相等测试"
+  ],
+  "author": "郭斌勇",
+  "license": "ISC",
+  "files": [
+    "dist/[^.]*",
+    "types/[^.]*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.ts",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-typescript": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "eslint": "^7.0.0",
+    "package-tls": "^1.0.2",
+    "path": "^0.12.7",
+    "rollup": "^2.7.2",
+    "rollup-plugin-terser": "^6.1.0",
+    "ts-node": "^8.9.1",
+    "tslib": "^2.0.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@gby/deep-copy": "^1.0.0",
+    "type-tls": "^2.0.2"
+  }
+}
