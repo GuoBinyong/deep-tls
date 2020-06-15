@@ -68,7 +68,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@gby/deep-copy": "^1.0.0",
+    "@gby/deep-copy": "^1.1.4",
     "type-tls": "^2.0.2"
   }
 }
