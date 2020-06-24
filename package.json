@@ -41,7 +41,7 @@
     "相等测试"
   ],
   "author": "郭斌勇",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist/[^.]*",
     "types/[^.]*"
@@ -68,7 +68,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@gby/deep-copy": "^2.0.0",
-    "type-tls": "^2.0.2"
+    "@gby/deep-copy": "^2.1.0",
+    "type-tls": "^2.2.0"
   }
 }
