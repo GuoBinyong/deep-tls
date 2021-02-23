@@ -1,6 +1,6 @@
 {
   "name": "deep-tls",
-  "version": "2.0.1",
+  "version": "3.0.0-0",
   "description": "deep-tls 提供了一些对数据进行深度操作的工具，如：深度相等测试、深拷贝等；其中，深拷贝可对任意数据进行深度拷贝，包括 函数 function、正则 RegExp、Map、Set、Date、Array、URL 等等；支持扩展，可根据数据类型定制拷贝逻辑，也可指定拷贝深度；所以，通过它可实现对任意类型的数据进行任意想要的拷贝",
   "main": "dist/deep-tls.cjs.js",
   "module": "dist/deep-tls.es.js",
@@ -58,23 +58,23 @@
     "pretest": "npm run build"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.0.1",
-    "@rollup/plugin-typescript": "^8.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
-    "eslint": "^7.15.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@rollup/plugin-typescript": "^8.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
     "package-tls": "^1.2.2",
     "path": "^0.12.7",
-    "rollup": "^2.35.1",
+    "rollup": "^2.39.0",
     "rollup-plugin-terser": "^7.0.2",
     "ts-node": "^9.1.1",
-    "tslib": "^2.0.3",
-    "typescript": "^4.1.3"
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.5"
   },
   "dependencies": {
-    "@gby/deep-copy": "^2.1.0",
+    "@gby/deep-copy": "^4.0.0",
     "type-tls": "^2.2.0"
   }
 }
