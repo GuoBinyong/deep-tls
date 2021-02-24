@@ -1,19 +1,20 @@
 [深拷贝文档]: https://github.com/GuoBinyong/deep-copy
-
+[介绍与安装]: ../README.md
 
 目录
 =====
 
 <!-- TOC -->
 
-- [1. deepCopy()](#1-deepcopy)
-- [2. createDeepCopy()](#2-createdeepcopy)
-- [3. isDeepEqual()](#3-isdeepequal)
-- [4. DepthLoopPropertyCallback](#4-depthlooppropertycallback)
-- [5. DeepLoopOptions](#5-deeploopoptions)
-- [6. DeepLoopOwnPropertyOptions](#6-deeploopownpropertyoptions)
-- [7. deepLoopOwnProperty()](#7-deeploopownproperty)
-- [8. deepLoopPropertyWithPrototype()](#8-deeplooppropertywithprototype)
+- [1. 相关文章](#1-相关文章)
+- [2. deepCopy()](#2-deepcopy)
+- [3. createDeepCopy()](#3-createdeepcopy)
+- [4. isDeepEqual()](#4-isdeepequal)
+- [5. DepthLoopPropertyCallback](#5-depthlooppropertycallback)
+- [6. DeepLoopOptions](#6-deeploopoptions)
+- [7. DeepLoopOwnPropertyOptions](#7-deeploopownpropertyoptions)
+- [8. deepLoopOwnProperty()](#8-deeploopownproperty)
+- [9. deepLoopPropertyWithPrototype()](#9-deeplooppropertywithprototype)
 
 <!-- /TOC -->
 
@@ -21,14 +22,16 @@
 内容
 ======
 
+# 1. 相关文章
+- [deep-tls的介绍与安装][介绍与安装]
 
-# 1. deepCopy()
+# 2. deepCopy()
 详情请参数 [深拷贝文档][]
-# 2. createDeepCopy()
+# 3. createDeepCopy()
 详情请参数 [深拷贝文档][]
 
 
-# 3. isDeepEqual()
+# 4. isDeepEqual()
 ```
 function isDeepEqual(a: any, b: any, nullNotEqualUndefined?: boolean, strict?: boolean): boolean;
 ```
@@ -48,7 +51,7 @@ function isDeepEqual(a: any, b: any, nullNotEqualUndefined?: boolean, strict?: b
 
 
 
-# 4. DepthLoopPropertyCallback
+# 5. DepthLoopPropertyCallback
 ```
 type DepthLoopPropertyCallback<ThisVal> = (this: ThisVal, key: string, value: any, obj: any, currDepth: number) => any;
 ```
@@ -60,7 +63,7 @@ type DepthLoopPropertyCallback<ThisVal> = (this: ThisVal, key: string, value: an
 * @returns stopInfo : any      表示是否中止循环，并且该值会被 deepLoopOwnProperty 函数返回，如果返回的值是真值，则终止循环；
 
 
-# 5. DeepLoopOptions
+# 6. DeepLoopOptions
 ```
 interface DeepLoopOptions<ThisVal = any> {
     maxDepth?: number | null | undefined;
@@ -72,7 +75,7 @@ deepLoop的公共选项
 * @property  thisValue?: ThisVal;     // 可选；  callback 回调函数的this值 ；默认值：当前被遍历的属性所属的对象；
 
 
-# 6. DeepLoopOwnPropertyOptions
+# 7. DeepLoopOwnPropertyOptions
 ```
 interface DeepLoopOwnPropertyOptions<ThisVal = any> extends DeepLoopOptions<ThisVal> {
     allOwnProps?: OptionalBoolean;
@@ -83,7 +86,7 @@ deepLoopOwnPropertyOptions的选项
 
 
 
-# 7. deepLoopOwnProperty()
+# 8. deepLoopOwnProperty()
 ```
 function deepLoopOwnProperty<Target extends object, ThisVal>(target: Target, callback: DepthLoopPropertyCallback<ThisVal extends undefined ? Target : ThisVal>, options?: DeepLoopOwnPropertyOptions<ThisVal> | null | undefined): any;
 ```
@@ -99,7 +102,7 @@ function deepLoopOwnProperty<Target extends object, ThisVal>(target: Target, cal
 
 
 
-# 8. deepLoopPropertyWithPrototype()
+# 9. deepLoopPropertyWithPrototype()
 ```
 function deepLoopPropertyWithPrototype<Target extends object, ThisVal>(target: Target, callback: DepthLoopPropertyCallback<ThisVal extends undefined ? Target : ThisVal>, options?: DeepLoopOptions<ThisVal> | null | undefined): any;
 ```
